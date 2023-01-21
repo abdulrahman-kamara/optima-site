@@ -2,9 +2,9 @@ import React from "react";
 
 function Home() {
   return (
-    <div>
-      <h>This is Contact</h>
-    </div>
+    <section className="hero">
+      <h1>Welcome to nav</h1>
+    </section>
   );
 }
 

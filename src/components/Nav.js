@@ -1,118 +1,96 @@
-import React from "react";
-// import { makeStyles } from "@material-ui/core";
-// @mui/material/styles
-import {
-  AppBar,
-  Toolbar,
-  IconButton,
-  Drawer,
-  List,
-  ListItem,
-  ListItemText,
-  Typography,
-  useMediaQuery,
-  makeStyles,
-} from "@material-ui/core";
-import {
-  Menu as MenuIcon,
-  ChevronLeft as ChevronLeftIcon,
-} from "@material-ui/icons";
-import { BrowserRouter, Route, Link, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./Nav.css";
+import { ImMenu } from "react-icons/im";
+import { ImCross } from "react-icons/im";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  title: {
-    flexGrow: 1,
-  },
-  drawer: {
-    width: 240,
-  },
-  drawerPaper: {
-    width: 240,
-  },
-  drawerHeader: {
-    display: "flex",
-    alignItems: "center",
-    padding: theme.spacing(0, 1),
-    // necessary for content to be below app bar
-    ...theme.mixins.toolbar,
-    justifyContent: "flex-end",
-  },
-}));
-
-function NavMenu() {
-  const classes = useStyles();
-  const [open, setOpen] = React.useState(false);
-  const matches = useMediaQuery("(min-width:600px)");
-  const history = useNavigate();
-
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
-
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
+function NavBar() {
+  const [mobile, setmobile] = useState(false);
 
   return (
-    <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
-          {!matches && (
-            <IconButton
-              edge="start"
-              className={classes.menuButton}
-              color="inherit"
-              aria-label="menu"
-              onClick={handleDrawerOpen}
-            >
-              <MenuIcon />
-            </IconButton>
-          )}
-          <Typography variant="h6" className={classes.title}>
-            My App
-          </Typography>
-        </Toolbar>
-      </AppBar>
-      {!matches && (
-        <Drawer
-          className={classes.drawer}
-          variant="temporary"
-          open={open}
-          onClose={handleDrawerClose}
-          classes={{
-            paper: classes.drawerPaper,
-          }}
-        >
-          <div className={classes.drawerHeader}>
-            <IconButton onClick={handleDrawerClose}>
-              <ChevronLeftIcon />
-            </IconButton>
-          </div>
-          <List>
-            <ListItem button key="Home" onClick={() => history.push("/")}>
-              <ListItemText primary="Home" />
-            </ListItem>
-            <ListItem button key="About" onClick={() => history.push("/about")}>
-              <ListItemText primary="About" />
-            </ListItem>
-            <ListItem
-              button
-              key="Contact"
-              onClick={() => history.push("/contact")}
-            >
-              <ListItemText primary="Contact" />
-            </ListItem>
-          </List>
-        </Drawer>
-      )}
-    </div>
+    <nav className="navbar">
+      <h3 className="logo">Logo</h3>
+
+      <ul
+        className={mobile ? "nav-links-mobile" : "nav-link"}
+        onClick={() => setmobile(false)}
+      >
+        <Link to="/">
+          <li>Home</li>
+        </Link>
+        <Link to="/about">
+          <li>About</li>
+        </Link>
+        <Link to="/contact">
+          <li>Contact</li>
+        </Link>
+      </ul>
+      <button className="mobile-menu-icon" onClick={() => setmobile(!mobile)}>
+        {mobile ? <ImCross /> : <ImMenu />}
+      </button>
+    </nav>
   );
 }
 
-export default NavMenu;
+export default NavBar;
+
+// import * as React from "react";
+// import AppBar from "@mui/material/AppBar";
+// import Box from "@mui/material/Box";
+// import Toolbar from "@mui/material/Toolbar";
+// import Typography from "@mui/material/Typography";
+// import Button from "@mui/material/Button";
+// import IconButton from "@mui/material/IconButton";
+// import MenuIcon from "@mui/icons-material/Menu";
+
+// const useStyles = makeStyles((theme) => ({
+//   root: {
+//     flexGrow: 1,
+//   },
+//   menuButton: {
+//     marginRight: theme.spacing(2),
+//   },
+//   title: {
+//     flexGrow: 1,
+//   },
+//   drawer: {
+//     width: 240,
+//   },
+//   drawerPaper: {
+//     width: 240,
+//   },
+//   drawerHeader: {
+//     display: "flex",
+//     alignItems: "center",
+//     padding: theme.spacing(0, 1),
+//     // necessary for content to be below app bar
+//     ...theme.mixins.toolbar,
+//     justifyContent: "flex-end",
+//   },
+// }));
+
+// export default function ButtonAppBar() {
+//   const classes = useStyles();
+
+//   return (
+//     <Box sx={{ flexGrow: 1 }}>
+//       <AppBar position="static">
+//         <Toolbar>
+//           <IconButton
+//             size="large"
+//             edge="start"
+//             color="inherit"
+//             aria-label="menu"
+//             sx={{ mr: 2 }}
+//           >
+//             <MenuIcon />
+//           </IconButton>
+//           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+//             News
+//           </Typography>
+//           <Button color="inherit">Login</Button>
+//         </Toolbar>
+//       </AppBar>
+//     </Box>
+//   );
+// }

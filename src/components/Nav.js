@@ -30,31 +30,31 @@ function NavBar() {
         // onMouseEnter={()=> setHover(false)}
         // onMouseLeave={()=> setHover(false)}
       >
-        <Link activeClass="active" to="/">
+        <Link  to="/">
           <li>Accuiel</li>
         </Link>
-        <Link activeClass="active" to="/activities">
+        <Link  to="/activities">
           <li>Notre Activités</li>
         </Link>
-        <Link activeClass="active" to="/notre métier">
+        <Link  to="/notre métier">
           <li>Nos métier</li>
         </Link>
-        <Link activeClass="active" to="/certificat">
+        <Link  to="/certificat">
           <li>Certificats & Agréments</li>
         </Link>
-        <Link activeClass="active" to="/about">
+        <Link  to="/about">
           <li>Boutique</li>
         </Link>
-        <Link activeClass="active" to="/carrières">
+        <Link  to="/carrières">
           <li>Carrières</li>
         </Link>
-        <Link activeClass="active" to="/notre réseau">
+        <Link  to="/notre réseau">
           <li>Notre Réseau</li>
         </Link>
-        <Link activeClass="active" to="/contact">
+        <Link  to="/contact">
           <li>Contact</li>
         </Link>
-        <Link activeClass="active" to="/réclamations">
+        <Link  to="/réclamations">
           <li>Réclamations / Appels</li>
         </Link>
       </ul>

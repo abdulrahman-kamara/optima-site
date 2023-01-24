@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+// import PerfectScrollbar from 'react-perfect-scrollbar'
 import "./Nav.css";
 import { ImMenu } from "react-icons/im";
 import { ImCross } from "react-icons/im";
@@ -10,13 +11,16 @@ function NavBar() {
   
 
   return (
+
     <nav className="navbar">
 
-      {/* <div className="logo">
+      <div className="logo">
         <a className="nav-bar-link" href="/">
-        <img src="/images/logo.jpg" alt="" className="logo"/>
+        <img src="/images/logo.jpg" alt="" className="logo-image" />
+ <h6 className="logo-name">CERCLE OPTIMA</h6>
         </a>
-      </div> */}
+       
+      </div>
 
       <ul
         className={ mobile ? "nav-links-mobile" : "nav-link" } 
@@ -26,31 +30,31 @@ function NavBar() {
         // onMouseEnter={()=> setHover(false)}
         // onMouseLeave={()=> setHover(false)}
       >
-        <Link to="/">
+        <Link activeClass="active" to="/">
           <li>Accuiel</li>
         </Link>
-        <Link to="/activities">
+        <Link activeClass="active" to="/activities">
           <li>Notre Activités</li>
         </Link>
-        <Link to="/notre métier">
+        <Link activeClass="active" to="/notre métier">
           <li>Nos métier</li>
         </Link>
-        <Link to="/certificat">
+        <Link activeClass="active" to="/certificat">
           <li>Certificats & Agréments</li>
         </Link>
-        <Link to="/about">
+        <Link activeClass="active" to="/about">
           <li>Boutique</li>
         </Link>
-        <Link to="/carrières">
+        <Link activeClass="active" to="/carrières">
           <li>Carrières</li>
         </Link>
-        <Link to="/notre réseau">
+        <Link activeClass="active" to="/notre réseau">
           <li>Notre Réseau</li>
         </Link>
-        <Link to="/contact">
+        <Link activeClass="active" to="/contact">
           <li>Contact</li>
         </Link>
-        <Link to="/réclamations">
+        <Link activeClass="active" to="/réclamations">
           <li>Réclamations / Appels</li>
         </Link>
       </ul>
@@ -58,6 +62,7 @@ function NavBar() {
         {mobile ? <ImCross  size={15}/> : <ImMenu  size={25}/>}
       </button>
     </nav>
+   
   );
 }
 

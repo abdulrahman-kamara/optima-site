@@ -10,7 +10,7 @@
   --comet-success: #01c461;
   --comet-red: #e65d5e;
   --comet-yellow: #fdaf13;
-  --comet-danger: #F21905;
+  --comet-danger: #f21905;
   --comet-danger-dark: #b30f00;
   --comet-dark-blue: #151b26;
   --comet-blue: #4869ee;
@@ -21,16 +21,14 @@
   --comet-hover-color: #4869ee !important
       /*rgba(0, 0, 0, 0.08)*/
   ;
-  --comet-input-placeholder: #CBD1DC;
+  --comet-input-placeholder: #cbd1dc;
 }
-
-
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   color: var(--comet-text);
 }
 
@@ -50,29 +48,26 @@ a {
   width: 100%;
   box-sizing: border-box;
 }
- .logo {
+.logo {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
-  
- 
-} 
- a .logo-image {
-  align-items: center;
-    display: flex;
-    position: absolute;
-    top: 20px;
-    left: 40px;
-    width: 40px;
-    height: 40px;
-    line-height: 20px;
 }
-a .logo-name{
+a .logo-image {
+  align-items: center;
+  display: flex;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 40px;
+  height: 40px;
+  line-height: 20px;
+}
+a .logo-name {
   margin-top: 10px;
   padding-left: 30px;
   font-weight: bold;
-
 }
 .nav-link {
   display: flex;
@@ -91,17 +86,15 @@ a .logo-name{
   margin: 0 10px;
   cursor: pointer;
   text-decoration: none;
-  font-size: medium;
+  font-size: small;
 }
 
-.nav-link li :hover{
+.nav-link li :hover {
   background-color: var(--comet-hover-color);
 }
-.nav-link li :hover{
-color: var(--comet-text);
+.nav-link li :hover {
+  color: var(--comet-text);
 }
-
-
 
 .nav-link link {
   text-decoration: none;
@@ -126,27 +119,26 @@ button {
 @media (max-width: 576px) {
   a .logo-image {
     align-items: center;
-      display: flex;
-      position: absolute;
-      top: 15px;
-      left: 40px;
-      width: 30px;
-      height: 30px;
-      line-height: 20px;
+    display: flex;
+    position: absolute;
+    top: 15px;
+    left: 40px;
+    width: 30px;
+    height: 30px;
+    line-height: 20px;
   }
-  a .logo-name{
+  a .logo-name {
     margin-top: -25px;
     padding-left: 65px;
     font-weight: bold;
-  
   }
-  .nav-bar-link{
+  .nav-bar-link {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     padding-bottom: 20px;
   }
- 
+
   .nav-link {
     display: none;
   }
@@ -163,11 +155,6 @@ button {
     box-sizing: border-box;
     margin-right: 10px;
     right: 0;
-    
-  
-    
-    
-   
   }
   ul {
     position: fixed;
@@ -179,10 +166,8 @@ button {
     padding: 10px;
     border-radius: 20px;
     margin-bottom: 100px;
-   
-  
-    }
-    
+  }
+
   ul li {
     display: flex;
     flex-direction: column;
@@ -198,7 +183,6 @@ button {
     position: absolute;
     display: block;
     right: 20px;
-   
   }
   .hero h1 {
     font-size: 50px;
@@ -208,24 +192,23 @@ button {
 @media (max-width: 768px) {
   a .logo-image {
     align-items: center;
-      display: flex;
-      position: absolute;
-      top: 5px;
-      left: 40px;
-      width: 30px;
-      height: 30px;
-      line-height: 20px;
+    display: flex;
+    position: absolute;
+    top: 5px;
+    left: 40px;
+    width: 30px;
+    height: 30px;
+    line-height: 20px;
   }
-  a .logo-name{
+  a .logo-name {
     margin-top: -25px;
     padding-left: 65px;
     font-weight: bold;
-  
   }
-  .nav-bar-link{
+  .nav-bar-link {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     padding-bottom: 20px;
   }
   .nav-link {
@@ -247,7 +230,7 @@ button {
   ul {
     position: fixed;
     top: -20px;
-    padding-bottom: 20px ;
+    padding-bottom: 20px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -256,8 +239,8 @@ button {
     left: 72%;
     border-radius: 20px;
     margin: 10px;
-    }
-    
+  }
+
   ul li {
     display: flex;
     flex-direction: column;
@@ -279,28 +262,26 @@ button {
   }
 }
 
-
 @media (max-width: 992px) {
   a .logo-image {
     align-items: center;
-      display: flex;
-      position: absolute;
-      top: 5px;
-      left: 40px;
-      width: 30px;
-      height: 30px;
-      line-height: 20px;
+    display: flex;
+    position: absolute;
+    top: 5px;
+    left: 40px;
+    width: 30px;
+    height: 30px;
+    line-height: 20px;
   }
-  a .logo-name{
+  a .logo-name {
     margin-top: -25px;
     padding-left: 65px;
     font-weight: bold;
-  
   }
-  .nav-bar-link{
+  .nav-bar-link {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     padding-bottom: 20px;
   }
   .nav-link {
@@ -319,24 +300,22 @@ button {
     box-sizing: border-box;
     border-left: 1px solid rgb(126, 117, 117);
     right: 0;
-    
-    
-}
-  
-  ul {
-  position: fixed;
-  top: -20px;
-  padding-bottom: 20px ;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  left: 60%;
-  border-radius: 20px;
-  margin: 10px;
   }
-  
+
+  ul {
+    position: fixed;
+    top: -20px;
+    padding-bottom: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    left: 60%;
+    border-radius: 20px;
+    margin: 10px;
+  }
+
   ul li {
     padding: 10px;
     width: 30vh;
@@ -345,8 +324,7 @@ button {
     font-size: large;
     background-color: rgba(255, 255, 255, 0.575);
   }
- 
- 
+
   .mobile-menu-icon {
     position: absolute;
     display: block;
@@ -360,24 +338,23 @@ button {
 @media (max-width: 1200px) {
   a .logo-image {
     align-items: center;
-      display: flex;
-      position: absolute;
-     top: 10px;
+    display: flex;
+    position: absolute;
+    top: 10px;
     left: 23px;
-      width: 30px;
-      height: 30px;
-      line-height: 20px;
+    width: 30px;
+    height: 30px;
+    line-height: 20px;
   }
-  a .logo-name{
+  a .logo-name {
     margin-top: -25px;
     padding-left: 65px;
     font-weight: bold;
-  
   }
-  .nav-bar-link{
+  .nav-bar-link {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     padding-bottom: 20px;
   }
   li {
@@ -404,11 +381,8 @@ button {
     margin: 0 10px;
     cursor: pointer;
     text-decoration: none;
-   
-    
-  
   }
-  
+
   .hero h1 {
     font-size: 50px;
   }
@@ -422,7 +396,6 @@ button {
   }
   li {
     list-style: none;
-    
   }
   a {
     text-decoration: none;
@@ -441,18 +414,15 @@ button {
     padding: 0 3px;
     margin: 0 3px;
     cursor: pointer;
-    text-decoration: none; 
+    text-decoration: none;
     font-size: small;
-
-  
   }
- 
-  
+
   .hero h1 {
     font-size: 50px;
   }
 }
-  /* @media (max-width: 1400px) {
+/* @media (max-width: 1400px) {
   .logo {
     display: flex;
     position: absolute;
@@ -489,7 +459,3 @@ button {
     font-size: 50px;
   }
 }   */
-
-
-
-

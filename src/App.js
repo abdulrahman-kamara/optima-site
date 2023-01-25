@@ -7,7 +7,7 @@ import Carrières from "./pages/Carrières";
 import Certificats from "./pages/Certificats";
 import Métier from "./pages/Métier";
 import Réclamations from "./pages/Réclamations";
-import Réseau from "./pages/Réseau";
+import Réseau from "./pages/Nore-reseau/Adherent"
 import Contact from "./pages/Contact";
 
 function App() {

@@ -29,7 +29,11 @@ export default function AdherentMap() {
         park.geometry.coordinates[1],
         park.geometry.coordinates[0]
      ]}
-   onClick={()=>{setAdherentLoc(console.log("i've been clicked"))}}
+   eventHandlers={{
+    click: () => {
+        setAdherentLoc(park)
+    }
+   }}
     icon={icon}
      />
      ))}
@@ -45,11 +49,11 @@ export default function AdherentMap() {
 
          
         >
-            Test
-            {/* <div>
+           
+            <div>
                 <h2>{aderentLoc.properties.NAME}</h2>
                 <p>{aderentLoc.properties.DESCRIPTIO}</p>
-            </div> */}
+            </div>
         </Popup>
      )}
     

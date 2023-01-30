@@ -1,19 +1,59 @@
 import React from 'react'
-import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet'
+import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
+import { useState } from 'react';
+import {  Icon } from 'leaflet';
+import "leaflet/dist/leaflet.css"
+import data from '../../../data/skateboard-parks.json'
+
+
+export const icon  = new Icon({
+    iconUrl : "/skateboarding.svg",
+    iconSize : [25, 25]
+})
 
 export default function AdherentMap() {
-    // const center = [51.505, -0.09]
+    const [aderentLoc, setAdherentLoc] = useState(null)
+  
   return (
-    <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+    <MapContainer center={[45.4, -75.7]} zoom={13} scrollWheelZoom={false}
+    style={{width:'50%', height:'50vh'}}
+    >
     <TileLayer
       attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     />
-    <Marker position={[51.505, -0.09]}>
-      <Popup>
-        A pretty CSS3 popup. <br /> Easily customizable.
-      </Popup>
-    </Marker>
+    {data.features.map((park) => (
+     <Marker
+     key={park.properties.PARK_ID}
+     position={[
+        park.geometry.coordinates[1],
+        park.geometry.coordinates[0]
+     ]}
+   onClick={()=>{setAdherentLoc(console.log("i've been clicked"))}}
+    icon={icon}
+     />
+     ))}
+     {aderentLoc && (
+        <Popup
+        position={[
+            aderentLoc.geometry.coordinates[1],
+            aderentLoc.geometry.coordinates[0]
+         ]}
+         onClose={()=>{
+            setAdherentLoc(null)
+         }}
+
+         
+        >
+            Test
+            {/* <div>
+                <h2>{aderentLoc.properties.NAME}</h2>
+                <p>{aderentLoc.properties.DESCRIPTIO}</p>
+            </div> */}
+        </Popup>
+     )}
+    
+
   </MapContainer>
   )
 }

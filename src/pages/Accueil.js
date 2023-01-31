@@ -1,19 +1,29 @@
+import { JoinFullSharp } from "@mui/icons-material";
 import React from "react";
-
+import image from "../components/Background/backgroundImage.webp";
+import  './pages.css'
 function Accueil() {
   return (
-    <section className="hero">
+    <>
+    <section style={{ backgroundImage: `URL(${image})`,
+          backgroundRepeat:"no-repeat",
+          backgroundPosition:"center",
+          backgroundSize:"cover",
+          height:"621px",}}>
+    
       <div
         className="hero-title"
         style={{
-          display: "block",
+          display: "flex",
+          flexDirection:"column",
           fontSize: "24px",
           fontweight: "bold",
           textAlign: "center",
-          marginBottom: "20px",
+    
         }}
       >
-        <h2>Offre Accompagnement Qualité :</h2>
+        <div>
+          <h2 style={{paddingTop:"20px", paddingBottom:"20px"}}>Offre Accompagnement Qualité :</h2>
         <a href="https://github.com/">
           {" "}
           Profiter de l'expérience de notre pôle auditeur !
@@ -36,11 +46,14 @@ function Accueil() {
           Contactez nous ! Nous vous aiderons à définir vos besoins
           04.42.50.96.90 / contact@cercleoptima.com
         </a>
-      </div>
+        </div>
+        
+      </div>    
+      </section>
       <main>
         <p>This is main</p>
       </main>
-    </section>
+</>
   );
 }
 

@@ -12,7 +12,6 @@
 span{
     display: block;
     justify-content: center;
-    padding-right: 500px;
      color:rgb(18, 19, 19);
      font-size: 24px;
      font-weight: bolder;
@@ -23,12 +22,35 @@ span{
    margin-top: 20px;
     background-color: black;
     height: 160vh;
-    width: 55%;
+    width: 67%;
   
 }
-ul li{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.cards{
+    transition: all 0.5s ease-out;
+    
 }
+.listtext{
+  flex-direction: column;
+  text-align: center;
+  padding: 5px;
+}
+
+/* Responsive Tablets, Mobile, Ipads */
+
+@media (max-width: 576px) {
+    
+  }
+  
+  @media (max-width: 768px) {
+   
+  }
+  
+  @media (max-width: 992px) {
+   
+  }
+  @media (max-width: 1200px) {
+    
+  }
+  @media (max-width: 1400px) {
+    
+  }

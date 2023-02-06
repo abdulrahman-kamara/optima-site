@@ -1,6 +1,6 @@
 import "./App.css";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
-import ButtonAppBar from "./components/Nav";
+import ButtonAppBar from "./components/Nav/Nav";
 import Accueil from "./pages/Accueil";
 import Activities from "./pages/Activities";
 import Carrières from "./pages/Carrières";
